@@ -1,0 +1,35 @@
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" formControlName="firstName">
+    <!-- Display validation errors if needed -->
+    <div *ngIf="personForm.get('firstName')?.errors?.['required'] && personForm.get('firstName')?.touched">
+      First name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" formControlName="lastName">
+    <!-- Display validation errors if needed -->
+    <div *ngIf="personForm.get('lastName')?.errors?.['required'] && personForm.get('lastName')?.touched">
+      Last name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="emailAddress">Email Address:</label>
+    <input type="email" id="emailAddress" formControlName="emailAddress">
+    <!-- Display validation errors if needed -->
+    <div *ngIf="personForm.get('emailAddress')?.errors?.['required'] && personForm.get('emailAddress')?.touched">
+      Email is required.
+    </div>
+    <div *ngIf="personForm.get('emailAddress')?.errors?.['email'] && personForm.get('emailAddress')?.touched">
+      Please enter a valid email address.
+    </div>
+  </div>
+
+  <!-- Other form fields and buttons -->
+
+  <button type="submit" [disabled]="personForm.invalid" (click)="onSubmit()">Submit</button>
+</form>

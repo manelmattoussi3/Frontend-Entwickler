@@ -1,0 +1,10 @@
+<div *ngIf="person">
+  <h2>{{ person.firstName }} {{ person.lastName }}</h2>
+  <p>ID: {{ person.id }}</p>
+  <p>Email: {{ person.emailAddress }}</p>
+  <button (click)="goBack()">Go Back</button>
+</div>
+
+<div *ngIf="!person">
+  <p>Person not found.</p>
+</div>
