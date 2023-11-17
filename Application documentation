@@ -1,0 +1,61 @@
+****Step 1: Define the Feature********
+
+Functionality 1: List all persons by name
+User Story
+As a user, I want to see a list of all persons sorted by their names.
+
+Functionality 2: Show details for a person
+User Story
+As a user, I want to view detailed information about a specific person when I click on their details.
+
+Functionality 3: Edit a person
+User Story
+As a user, I want to be able to edit the information of a person.
+
+
+Functionality 4: Delete a person from the list
+User Story
+As a user, I want to delete a person from the list of persons.
+
+*****Plan the Tests****
+Functionality 1: List all persons by name
+Test Specifications
+Should fetch and display a list of persons.
+Should display persons sorted by name.
+
+Functionality 2: Show details for a person
+Test Specifications
+Should navigate to person detail component when details are requested.
+Should display detailed information about the selected person.
+
+Functionality 3: Edit a person
+Test Specifications
+Should navigate to edit component when edit is requested.
+Should update person information on save.
+
+Functionality 4: Delete a person from the list
+Test Specifications
+Should remove a person from the list when delete is requested.
+
+*********************************document your development steps and explain the decisions you took****************************
+1. Project Setup
+Angular CLI: (ng new project-name).
+Folder Structure: Organize a project structure into modules, components, services.
+2. Planning 
+Define Person Model: Create a model for a person with attributes like id, first name, last name, and email address.
+Routing Setup: Configure routing for different views like listing, detail, edit person.
+3. Person List Component
+Create Person Service: Develop a service to manage CRUD operations for persons (mock service initially).
+Person List Component: Build a component to list all persons by name using the Person Service.
+Unit Tests: Write unit tests to ensure proper functionality of the list component and service.
+4. Person Detail Component
+Create Detail Component: Implement a component to display the details of a person.
+Routing Configuration: Set up routing to navigate to the detail component from the list component.
+Unit Tests: Write tests for the detail component, including tests for route navigation and fetching person details.
+5. Person Edit Component
+Edit Component: Develop a component to edit person details.
+Routing Setup: Configure routing to navigate to the edit component from the detail view.
+Unit Tests: Write tests to validate edit functionality, form validation, and route navigation.
+6. Person Delete Functionality
+Delete Service Method: Add a delete method to the Person Service.
+Integration Tests: Write integration tests to verify the delete functionality and its impact on the list.
